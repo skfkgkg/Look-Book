@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look Book</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+
+    <!-- lodash : 스크롤을 제어 할 수 있는 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- scrollMagic : 스크롤에 따라 해당 영역 감지 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+    <!-- ghap : 자바스크립트 애니메이션 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- topButton : scrollTopPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 탑버튼 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <!-- SWIPER 외부 라이브러리 연결-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+
+  <!-- 메인 스크립트 -->
+  <script defer src="js/main.js"></script>
+
+  <!-- 유튜브 API js 연결 -->
+  <script defer src="js/youtube.js"></script>
+
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <header>
+    <div class="head-fixed">
+      <h1><a href="index.html"><img src="images/logo.png" alt="lookbook"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="sub.html">Dandy</a></li>
+          <li><a href="sub.html">Casual</a></li>
+          <li><a href="sub.html">Street</a></li>
+          <li><a href="sub.html">Sport</a></li>
+          <li><a href="sub.html">Cutey</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 유튜브 영역 -->
+  <section class="youtube">
+    <h2 class="hidden">유투브 영역</h2>
+    <div class="guard"></div>
+    <div class="youtube__area">
+      <div id="player"></div>
+    </div>
+  </section>
+
+    <!-- swiper slide area -->
+    <section class="promotion">
+      <div class="swiper promotion-slide">
+        <div class="swiper-wrapper">
+          <h2>Look book Styles</h2>
+          <div class="swiper-slide">
+            <img src="./images/swiper-slider1.png" alt="style1">
+            <a href="#">스타일 설명</a>
+            <p>
+              베이식한 디자인의 가디건과<br>
+              브라운 니트를 매치하고<br>
+              슬랙스에 더블 코트를 걸쳐 마무리한<br>
+              댄디 룩
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swiper-slider2.png" alt="style2">
+            <a href="#">스타일 설명</a>
+            <p>
+              시원하게 입기 좋은 원피스와<br>
+              카디건을 매치하고<br>
+              블랙샌들로 마무리한<br>
+              걸리시 룩
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swiper-slider3.png" alt="style3">
+            <a href="#">스타일 설명</a>
+            <p>
+              데님 셔츠와 팬츠에<br>
+              블랙 부츠로 연출한<br>
+              댄디 룩
+            </p>
+          </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-prev"></div>
+        <div class="swiper-next"></div>
+      </div>
+    </section>
+
+    <!-- <hr> -->
+
+      <!-- animate area -->
+  <section class="animate scroll-spy">
+    <div class="inner">
+        <h2 class="hidden">추천코디</h2>
+      <div class="img-box fade-in back-to-position">
+        <p class="cup1 p1 back-to-position">추천 코디</p>
+        <p class="cup1 p2 back-to-position">모델 프로필</p>
+        <img src="./images/animate1.png" alt="추천 코디" class="cup1 image1 back-to-position">
+        <img src="./images/animate-propil1.png" alt="모델 사진" class="cup1 image2 back-to-position">
+        <img src="./images/animate-propil-text1.png" alt="모델 프로필" class="cup1 text back-to-position">
+      </div>
+      <div class="img-box fade-in back-to-position">
+        <p class="cup2 p1 back-to-position">추천 코디</p>
+        <p class="cup2 p2 back-to-position">모델 프로필</p>
+        <img src="./images/animate2.png" alt="추천 코디" class="cup2 image1 back-to-position">
+        <img src="./images/animate-propil2.png" alt="모델 사진" class="cup2 image2 back-to-position">
+        <img src="./images/animate-propil-text2.png" alt="모델 프로필" class="cup2 text back-to-position">
+      </div>
+      <div class="img-box fade-in back-to-position">
+        <p class="cup3 p1 back-to-position">착용 상품</p>
+        <img src="./images/animate-item1.png" alt="착용 상품" class="cup3 image1 back-to-position">
+        <img src="./images/animate-item2.png" alt="착용 상품" class="cup3 image2 back-to-position">
+      </div>
+      <div class="img-box fade-in back-to-position">
+        <p class="cup4 p1 back-to-position">착용 상품</p>
+        <img src="./images/animate-item3.png" alt="착용 상품" class="cup4 image1 back-to-position">
+        <img src="./images/animate-item4.png" alt="착용 상품" class="cup4 image2 back-to-position">
+        <img src="./images/animate-item5.png" alt="착용 상품" class="cup4 image3 back-to-position">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Swiper2 area -->
+  <section class="cody-choice">
+    
+    <h2>Cody Choice</h2>
+    <div class="girl">
+      <div class="swiper swiper2-slide">
+        <div class="swiper-wrapper">
+          <h3 class="hidden">여자 style</h3>
+          <div class="swiper-slide">
+            <img src="./images/cody-choice-girls1.png" alt="girl-style1">
+            </div>
+          <div class="swiper-slide">
+            <img src="./images/cody-choice-girls2.png" alt="girl-style2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/cody-choice-girls3.png" alt="girl-style3">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/cody-choice-girls4.png" alt="girl-style4">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/cody-choice-girls5.png" alt="girl-style5">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+      <div class="man">
+        <div class="swiper swiper3-slide">
+          <div class="swiper-wrapper">
+            <h3 class="hidden">남자 style</h3>
+            <div class="swiper-slide">
+              <img src="./images/cody-choice-mans1.png" alt="man-style1">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cody-choice-mans2.png" alt="man-style2">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cody-choice-mans3.png" alt="man-style3">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cody-choice-mans4.png" alt="man-style4">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cody-choice-mans5.png" alt="man-style5">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+  </section>
+
+
+  <!-- MORE BUTTON area -->
+  <div class="more"></div>
+  <section class="more-section">
+    <h2>Look Book</h2>
+    <div class="more-wrap">
+      <div><img src="./images/lookbook-style1.png" alt="more-img"></div>
+      <div><img src="./images/lookbook-style2.png" alt="more-img"></div>
+      <div><img src="./images/lookbook-style3.png" alt="more-img"></div>
+      <div><img src="./images/lookbook-style4.png" alt="more-img"></div>
+      <div><img src="./images/lookbook-style5.png" alt="more-img"></div>
+      <div><img src="./images/lookbook-style6.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style7.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style8.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style9.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style10.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style11.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style12.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style13.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style14.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style15.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style16.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style17.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style18.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style19.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style20.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style21.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style22.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style23.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style24.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style25.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style26.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style27.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style28.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style29.png" alt="more-img"></div>
+      <div class="hide"><img src="./images/lookbook-style30.png" alt="more-img"></div>
+    </div>
+
+    <button id="moreBtn" onclick="showMore()">더보기</button>
+  </section>
+
+  <footer>
+    <div class="foot-wrap">
+      <h2>2023-05-25 Look Book</h2>
+      <nav class="foot-nav1">
+        <ul>
+          <li><a href="#"><img src="./images/foot-icon1.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon2.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon3.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon4.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon5.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon6.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon7.png" alt="foot-icon"></a></li>
+          <li><a href="#"><img src="./images/foot-icon8.png" alt="foot-icon"></a></li>
+        </ul>
+      </nav>
+  
+      <nav class="foot-nav2">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">이벤트 공지</a></li>
+          <li><a href="#">입점/제휴/대량구매</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">영상정보처리기기 운영·관리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.
+      </address>
+    </div>
+  </footer>
+
+  <!-- TOP BUTTON -->
+  <div id="to-top">
+    <span class="material-symbols-outlined material-icons">
+      arrow_upward
+      </span>
+  </div>
+
+</body>
+</html>
